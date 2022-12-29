@@ -138,9 +138,9 @@ DELETE request also returns the deleted maintenance task as response.
 
 Below are links to Postman environment and request collection which can be used to test the service manual API.
 
-[Service Manual Postman Environment]()
+[Service Manual Postman Environment](https://github.com/jessekhuttunen/service-manual/blob/main/postman/service-manual.postman_environment.json)
 
-[Service Manual Postman Collection]()
+[Service Manual Postman Collection](https://github.com/jessekhuttunen/service-manual/blob/main/postman/service-manual.postman_collection.json)
 
 ### H2 Console
 Changes to the database can also be verified with H2 Console.
