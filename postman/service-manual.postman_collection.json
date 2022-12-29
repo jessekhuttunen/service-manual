@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "4a851265-4a89-4b6a-b3ee-dba310636a12",
+		"name": "Service Manual",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24972177"
+	},
+	"item": [
+		{
+			"name": "Get all factory devices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/factorydevices",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"factorydevices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get factory device by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/factorydevices/{{device_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"factorydevices",
+						"{{device_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all maintenance tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/tasks",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get maintenance tasks by factory device",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/factorydevices/{{device_id}}/tasks",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"factorydevices",
+						"{{device_id}}",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new maintenance task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"entryTime\": 1640988000000,\n    \"description\": \"Description of the new maintenance task\",\n    \"classfication\": \"MINOR\",\n    \"taskCompleted\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/tasks",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update maintenance task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"classification\": \"MAJOR\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/tasks/{{task_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tasks",
+						"{{task_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign maintenance task to factory device",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/tasks/{{task_id}}/factorydevice/{{device_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tasks",
+						"{{task_id}}",
+						"factorydevice",
+						"{{device_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete maintenance task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/tasks/{{task_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tasks",
+						"{{task_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
